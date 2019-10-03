@@ -1,7 +1,7 @@
 import json
 import sys
 import requests
-import time
+#import time
 
 def load_tweets(filename='cursed_architecture_archive.json'):
     try:
@@ -38,10 +38,6 @@ def main():
                 url = pic['media_url_https']
                 img = grab_image(url)
                 success = save_image(img, url)
-                if (success):
-                    print("downloaded "+url)
-                else:
-                    print("could not download"+url)
                 # please don't rate limit me
                 # time.sleep(10)
         except KeyError:
